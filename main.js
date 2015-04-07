@@ -1,4 +1,6 @@
-var numVictims = prompt("How many disaster victims do you wish to enter?");
+// create an Array filled with objects containing victim information
+
+var numVictims = prompt("How many victims will be entered?");
 var victim = [];
 for (i = 1; i <= numVictims; i++) {
 	var victimName = prompt("Enter name of victim " + i);
@@ -13,18 +15,20 @@ for (i = 1; i <= numVictims; i++) {
 		victim.push(victimInfo);
 }
 
+var victimNameList = [];
+
+// create an Array that contains the victim Names
+
+for (i = 0; i < numVictims; i++) {
+	victimNameList.push(victim[i]["name"]);
+}
 
 
-for
 
 
 
 
-
-// console.log(victim);
-
-
-//  Part 3
+//  Create an array that contains objects containing volunteer names
 
 var numVolunteers = prompt("How many volunteers will be entered?");
 var volunteer = [];
@@ -40,10 +44,17 @@ for (i=1; i <= numVolunteers; i++) {
 		volunteer.push(volunteerInfo);
 }
 
-// console.log(volunteer);
+// Create an array that contains the volunteer names
 
+var volunteerNameList = [];
+for (i = 0; i < numVolunteers; i++) {
+	volunteerNameList.push(volunteer[i]["name"]);
+}
 
-// alert("Number of victims: " + numVictims
-// 	// + "\nNumber of volunteers: " + numVolunteers
-// 	+ "\nVictim names: " + victim[0])
+// Create an Alert with info
+
+alert("Number of victims: " + numVictims
+ 	+ "\nNumber of volunteers: " + numVolunteers
+	+ "\nVictim names: " + victimNameList.join(", ")
+	+ "\nVolunteer names: " + volunteerNameList.join(", "));
 
